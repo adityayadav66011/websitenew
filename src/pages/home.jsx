@@ -116,11 +116,11 @@ export const Home = () => {
             <h2 className="center">What Our Clients Say</h2>
             <div className="grid grid-two-cols">
               <div className="testimonial">
-                <p>"SaiSatwik Technologies transformed our IT infrastructure. Highly recommended!"</p>
+                <p>"LearnLeap transformed our IT teaching sklills. Highly recommended!"</p>
                 <p>- Alex Johnson</p>
               </div>
               <div className="testimonial">
-                <p>"The team at SaiSatwik Technologies is incredibly skilled and professional."</p>
+                <p>"The team at LearnLeap is incredibly skilled and professional."</p>
                 <p>- Maria Davis</p>
               </div>
             </div>
