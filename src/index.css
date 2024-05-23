@@ -1,0 +1,549 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'CocogooseProTrial Ultralight', Helvetica, Arial, sans-serif;
+  color-scheme: light;
+}
+
+:root {
+  --bg-color: #f4f3ff;
+  --primary-color: #005EA0; /* Main primary color */
+  --secondary-color: #2B2A29; /* Main secondary color */
+  --accent-color: #1F8BD9; /* Accent color */
+  --dark-color: #084A78; /* Dark color */
+  --helper-color: #99b9ff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 5.4rem;
+  line-height: 1.1;
+  font-weight: bold;
+}
+
+p,
+li,
+label,
+input,
+textarea {
+  font-size: 1.5rem;
+  line-height: 1.56;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.06rem;
+}
+
+a {
+  font-weight: 500;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  color: var(--primary-color);
+  text-decoration: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+/* Layout Rules */
+
+.container {
+  max-width: 140rem;
+  padding: 4rem 2.4rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 6.4rem;
+}
+
+.grid-two-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-three-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-four-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Module Rules / Reusable */
+button {
+  text-transform: capitalize;
+  padding: 1rem 2.2rem;
+  font-size: 1.7rem;
+  font-weight: 500;
+  background-color: var(--primary-color);
+  border-radius: 0.8rem;
+  border: 0.1rem solid transparent;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+  transition: border-color 0.3s;
+}
+
+button:hover {
+  box-shadow: inset 0 0 0 0.2rem var(--bg-color);
+}
+
+.secondary-btn {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 0.2rem var(--primary-color);
+  margin-left: 3.2rem;
+}
+
+/* Hero Section */
+
+.section-hero .grid {
+  align-items: center;
+}
+
+.hero-content p {
+  margin: 2.4rem 0 4.8rem 0;
+}
+
+.hero-content p:first-child {
+  margin: 0 0 1.2rem 0;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 70%;
+  height: auto;
+}
+
+/* Analytics Section */
+
+.section-analytics {
+  margin: 5rem 0;
+}
+
+.section-analytics .container {
+  background-color: var(--bg-color);
+  border-radius: 1rem;
+}
+
+.section-analytics .grid {
+  color: var(--dark-color);
+  text-align: center;
+}
+
+.section-analytics .analytics-item {
+  border-right: 0.2rem solid var(--dark-color);
+}
+
+.section-analytics .analytics-item:last-child {
+  border: none;
+}
+
+.section-analytics h2 {
+  font-size: 4.8rem;
+}
+
+.section-analytics p {
+  text-transform: capitalize;
+}
+
+/* Course Highlights Section */
+
+.section-courses h2 {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-courses .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+}
+
+.section-courses .grid {
+  margin-top: 2rem; /* Adjust spacing */
+}
+
+
+.course-card {
+  text-align: center;
+}
+
+.course-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.course-card h3 {
+  font-size: 2.4rem;
+  margin: 2rem 0 1rem 0;
+}
+
+.course-card p {
+  font-size: 1.6rem;
+  color: var(--secondary-color);
+}
+
+/* Testimonials Section */
+
+.section-testimonials h2 {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.testimonial {
+  padding: 2rem;
+  border: 0.1rem solid var(--dark-color);
+  border-radius: 1rem;
+  background-color: var(--bg-color);
+}
+
+.testimonial p {
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Contact Section */
+
+.section-contact {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.section-contact h2 {
+  margin-bottom: 2rem;
+}
+
+.section-contact p {
+  margin-bottom: 4rem;
+}
+
+.section-contact .btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Footer Section */
+
+.section-footer {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 4rem 0;
+}
+
+.section-footer .grid {
+  gap: 2.4rem;
+}
+
+.section-footer h3 {
+  font-size: 3rem;
+  margin-bottom: 1.6rem;
+}
+
+.section-footer h4 {
+  font-size: 2rem;
+  margin-bottom: 1.6rem;
+}
+
+.section-footer ul {
+  list-style: none;
+}
+
+.section-footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.section-footer ul li a:hover {
+  text-decoration: underline;
+}
+
+.section-footer p {
+  font-size: 1.6rem;
+}
+
+.section-footer .social-media {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: start;
+}
+
+@media (max-width: 768px) {
+  .grid-two-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-three-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-four-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  p,
+  li,
+  label,
+  input,
+  textarea,
+  a,
+  button {
+    font-size: 1.6rem;
+  }
+}
+
+/* Center headings */
+.center {
+  text-align: center;
+}
+
+/* Form styles */
+.hero-form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.6rem;
+  border: 1px solid #ddd;
+  border-radius: 0.4rem;
+}
+
+/* Ensure the form is responsive */
+@media (max-width: 768px) {
+  .grid-two-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section-hero.about-hero {
+  background: url('/images/about-hero.jpg') center/cover no-repeat;
+  padding: 100px 0;
+  text-align: center;
+  color: white;
+}
+
+.section-hero.about-hero h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.section-about-us, .section-statistics {
+  padding: 50px 0;
+}
+
+.section-about-us .container, .section-statistics .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-about-us h2, .section-statistics h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.section-about-us p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.section-statistics .grid-three-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.section-statistics .stat-item h3 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.section-statistics .stat-item p {
+  font-size: 1.2rem;
+  margin: 10px 0 0;
+}
+
+.section-footer {
+  background: #333;
+  color: white;
+  padding: 30px 0;
+}
+
+.section-footer .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.section-footer h3, .section-footer h4 {
+  margin: 0 0 10px;
+}
+
+.section-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section-footer ul li {
+  margin: 0 0 5px;
+}
+
+.section-footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.section-footer ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Add CSS rules for the DiplomaProgram component */
+.diploma-program-container {
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.diploma-program-heading {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 50px;
+}
+
+.vertical-headings {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align the detail sections */
+}
+
+.detail-section {
+  width: 100%; /* Make the detail sections take full width */
+  max-width: 800px; /* Optionally, set a max width */
+  margin-bottom: 20px;
+}
+
+.detail-section h2 {
+  font-size: 30px;
+  text-align: center; /* Center align the headings */
+  margin-bottom: 10px;
+}
+
+.detail-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+   font-size: 13px;
+}
+
+.detail-section table th,
+.detail-section table td {
+  border: 2px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.detail-section table th {
+  background-color: #f2f2f2;
+}
+
+.detail-section ul {
+  padding-left: 20px;
+}
+
+.detail-section ul li {
+  margin-bottom: 5px;
+}
+
+.certificate-program-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.certificate-program-heading {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.vertical-headings {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align the detail sections */
+}
+
+.detail-section {
+  width: 100%; /* Make the detail sections take full width */
+  max-width: 800px; /* Optionally, set a max width */
+  margin-bottom: 20px;
+}
+
+.centered-heading {
+  font-size: 30px;
+  text-align: center; /* Center align the headings */
+  margin-bottom: 10px;
+}
+
+.detail-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.detail-section table th,
+.detail-section table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.detail-section table th {
+  background-color: #f2f2f2;
+}
+
+.detail-section ul {
+  padding-left: 20px;
+}
+
+.detail-section ul li {
+  margin-bottom: 5px;
+}

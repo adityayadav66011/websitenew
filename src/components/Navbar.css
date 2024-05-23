@@ -1,0 +1,132 @@
+/* Reset margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.social-bar {
+    background-color: #000000; /* Assuming you want the bar to be black instead of #005EA0 */
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon {
+    margin: 0 1rem;
+}
+
+.social-icon img {
+    width: 24px;  /* Adjust the size as needed */
+    height: 24px; /* Adjust the size as needed */
+    transition: transform 0.3s;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    max-width: 140rem;
+    padding: 4.2rem 2.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center items vertically */
+}
+
+.logo-brand .logo-image {
+    width: 110px; /* Adjust the width of the logo */
+    height: auto;  /* Maintain aspect ratio */
+}
+
+ul {
+    display: flex;
+    list-style: none; /* Remove default list styles */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+}
+
+/* Add space between navbar items */
+ul li {
+    margin-right: 1.5rem; /* Adjust spacing between items */
+    position: relative; /* Set position relative for dropdown positioning */
+}
+
+/* Style for the last navbar item, if needed */
+ul li:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+}
+
+/* Style for vertical dropdown */
+.dropdown.vertical {
+    display: none; /* Initially hide the dropdown */
+    position: absolute;
+    top: 100%; /* Position dropdown below its parent */
+    left: 50%; /* Start at the center of the parent item */
+    transform: translateX(-50%); /* Center the dropdown horizontally */
+    background-color: #ffffff; /* Background color of dropdown */
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1); /* Add box shadow for a subtle effect */
+    z-index: 1000; /* Ensure dropdown is above other elements */
+    padding: 0.5rem 0; /* Add padding inside the dropdown */
+    border-radius: 0.5rem; /* Add border-radius for rounded corners */
+    width: max-content; /* Set width to fit content */
+    overflow: hidden;
+}
+
+/* Style for each item in vertical dropdown */
+.dropdown.vertical li {
+    padding: 0.5rem 1rem; /* Add padding to each item */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Style for hovered item in vertical dropdown */
+.dropdown.vertical li:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+}
+
+/* Style for the last item in vertical dropdown */
+.dropdown.vertical li:last-child {
+    border-radius: 0 0 0.5rem 0.5rem; /* Add border-radius only to the bottom corners */
+}
+
+/* Show the dropdown when hovering over the parent item */
+ul li:hover .dropdown.vertical {
+    display: block;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul li {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .dropdown.vertical {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .dropdown.vertical li {
+        width: 100%;
+        padding: 1rem;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .dropdown.vertical li:last-child {
+        border-radius: 0;
+        border-bottom: none;
+    }
+}
