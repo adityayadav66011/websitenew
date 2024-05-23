@@ -21,19 +21,19 @@ export const Footer = () => {
           <p>Address: 1234 Street Name, City, Country</p>
           <div className="social-icons">
             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-              <img src="public/images/facebook.png" alt="Facebook" />
+              <img src="/images/facebook.png" alt="Facebook" />
             </a>
             <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-              <img src="public/images/twitter.png" alt="Twitter" />
+              <img src="/images/twitter.png" alt="Twitter" />
             </a>
             <a href="mailto:someone@example.com">
-              <img src="public/images/gmail.png" alt="Gmail" />
+              <img src="/images/gmail.png" alt="Gmail" />
             </a>
             <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-              <img src="public/images/linkedin.png" alt="LinkedIn" />
+              <img src="/images/linkedin.png" alt="LinkedIn" />
             </a>
             <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-              <img src="public/images/youtube.png" alt="YouTube" />
+              <img src="/images/youtube.png" alt="YouTube" />
             </a>
           </div>
         </div>

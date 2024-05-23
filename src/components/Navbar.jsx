@@ -36,7 +36,7 @@ export const Navbar = () => {
       <div className="container">
         <div className="logo-brand">
           <NavLink to="/">
-            <img src="public/images/WPS Photos(1).png" alt="LearnLeap Logo" className="logo-image" />
+            <img src="/images/WPS Photos(1).png" alt="LearnLeap Logo" className="logo-image" />
           </NavLink>
         </div>
 
