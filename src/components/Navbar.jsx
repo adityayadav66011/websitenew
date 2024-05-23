@@ -58,8 +58,8 @@ export const Navbar = () => {
                   <li><NavLink to="/diplomaprogram">Diploma Program for Foundational Stage</NavLink></li>
                   <li><NavLink to="/certificatefoundational">Certificate Program for Foundational Stage</NavLink></li>
                   <li><NavLink to="/certificateteaching">Certificate Program for Teaching Skills</NavLink></li>
-                  <li><NavLink to="/communicativeenglish">Certificate Program In Communicative English</NavLink></li>
-                  <li><NavLink to="/leadership">Certificate Program In Education Leadership</NavLink></li>
+                  <li><NavLink to="/certificateenglish">Certificate Program In Communicative English</NavLink></li>
+                  <li><NavLink to="/certificateleadership">Certificate Program In Education Leadership</NavLink></li>
                 </ul>
               )}
             </li>
