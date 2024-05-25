@@ -1,34 +1,24 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React from "react";
+import { NavLink, useHistory } from "react-router-dom";
 import "./Navbar.css";
 
 export const Navbar = () => {
-  const [showCoursesDropdown, setShowCoursesDropdown] = useState(false);
-
-  const handleMouseEnter = () => {
-    setShowCoursesDropdown(true);
-  };
-
-  const handleMouseLeave = () => {
-    setShowCoursesDropdown(false);
-  };
-
   return (
     <header>
       <div className="social-bar">
-        <a href="https://www.facebook.com" target="_blank" className="social-icon">
+        <a href="https://www.facebook.com" target="_blank" className="social-icon" rel="noreferrer">
           <img src="/images/facebook.png" alt="Facebook" />
         </a>
-        <a href="https://www.twitter.com" target="_blank" className="social-icon">
+        <a href="https://www.twitter.com" target="_blank" className="social-icon" rel="noreferrer">
           <img src="/images/twitter.png" alt="Twitter" />
         </a>
         <a href="mailto:someone@example.com" className="social-icon">
           <img src="/images/gmail.png" alt="Gmail" />
         </a>
-        <a href="https://www.linkedin.com" target="_blank" className="social-icon">
+        <a href="https://www.linkedin.com" target="_blank" className="social-icon" rel="noreferrer">
           <img src="/images/linkedin.png" alt="LinkedIn" />
         </a>
-        <a href="https://www.youtube.com" target="_blank" className="social-icon">
+        <a href="https://www.youtube.com" target="_blank" className="social-icon" rel="noreferrer">
           <img src="/images/youtube.png" alt="YouTube" />
         </a>
       </div>
@@ -48,21 +38,38 @@ export const Navbar = () => {
             <li>
               <NavLink to="/about">About Us</NavLink>
             </li>
-            
-            <li
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              <NavLink to="#">Program</NavLink>
-              {showCoursesDropdown && (
-                <ul className="dropdown vertical">
-                  <li><NavLink to="/diplomaprogram">Diploma Program for Foundational Stage</NavLink></li>
-                  <li><NavLink to="/certificatefoundational">Certificate Program for Foundational Stage</NavLink></li>
-                  <li><NavLink to="/certificateteaching">Certificate Program for Teaching Skills</NavLink></li>
-                  <li><NavLink to="/certificateenglish">Certificate Program In Communicative English</NavLink></li>
-                  <li><NavLink to="/certificateleadership">Certificate Program In Education Leadership</NavLink></li>
-                </ul>
-              )}
+            <li className="dropdown">
+              <span>Program</span>
+              <ul className="dropdown-menu">
+                <li className="dropdown-item">
+                  <span>Educators</span>
+                  <ul className="nested-dropdown">
+                    <li>
+                      <NavLink to="/diplomaprogram">Diploma Program for Foundational Stage</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/certificatefoundational">Certificate Program for Foundational Stage</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/certificateteaching">Certificate Program for Teaching Skills</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/certificateenglish">Certificate Program In Communicative English</NavLink>
+                    </li>
+                  </ul>
+                </li>
+                <li className="dropdown-item">
+                  <span>School Leaders</span>
+                  <ul className="nested-dropdown">
+                    <li>
+                      <NavLink to="/certificateleadership">Certificate Program In Education Leadership</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/certificateenglish">Certificate Program In Communicative English</NavLink>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </li>
             <li>
               <NavLink to="/contactus">Contact Us</NavLink>

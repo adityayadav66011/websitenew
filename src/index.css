@@ -1,3 +1,4 @@
+/* General CSS Reset and Variables */
 * {
   margin: 0;
   padding: 0;
@@ -78,53 +79,223 @@ li {
   grid-template-columns: repeat(4, 1fr);
 }
 
-/* Module Rules / Reusable */
-button {
-  text-transform: capitalize;
-  padding: 1rem 2.2rem;
-  font-size: 1.7rem;
-  font-weight: 500;
-  background-color: var(--primary-color);
-  border-radius: 0.8rem;
-  border: 0.1rem solid transparent;
-  cursor: pointer;
-  letter-spacing: 0.1rem;
-  transition: border-color 0.3s;
-}
-
-button:hover {
-  box-shadow: inset 0 0 0 0.2rem var(--bg-color);
-}
-
-.secondary-btn {
-  background-color: transparent;
-  box-shadow: inset 0 0 0 0.2rem var(--primary-color);
-  margin-left: 3.2rem;
-}
-
-/* Hero Section */
-
-.section-hero .grid {
-  align-items: center;
-}
-
-.hero-content p {
-  margin: 2.4rem 0 4.8rem 0;
-}
-
-.hero-content p:first-child {
-  margin: 0 0 1.2rem 0;
-}
-
-.hero-image {
+.flex {
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
-.hero-image img {
-  width: 70%;
-  height: auto;
+.flex-center {
+  justify-content: center;
 }
+
+.grid-center {
+  justify-items: center;
+}
+
+/* Reusable Utilities */
+
+.section {
+  padding: 8rem 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.4rem 2.4rem;
+  border-radius: 0.8rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.primary-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.primary-btn:hover {
+  background-color: var(--dark-color);
+}
+
+.section-hero {
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.hero-carousel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Ensure image stays within bounds */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.carousel-item.active img {
+  animation: zoom 10s infinite linear; /* Apply zoom only to active item */
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.carousel-text-overlay {
+  position: absolute;
+  top: 30%;
+  left: 5%; /* Adjusted from 0% to 5% for better alignment */
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 5rem; /* Increase font size */
+  text-align: left; /* Align text to the left */
+  width: 40%; /* Reduce width to ensure text wraps */
+  animation: fadeIn 1s ease-in-out;
+  white-space: pre-wrap; /* Ensure text wraps */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
+
+.hero-form-overlay {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 0.8rem;
+  width: 30%;
+}
+
+.form-group {
+  margin-bottom: 1.6rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.4rem;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+}
+
+.btn.primary-btn {
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1.6rem;
+}
+
+
+
+.section-analytics {
+  background-color: var(--bg-color);
+  padding: 4rem 0;
+}
+
+.analytics-item {
+  text-align: center;
+}
+
+.analytics-img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1.6rem;
+}
+
+.popular-courses-heading {
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.section-courses .course-list {
+  display: flex;
+  justify-content: space-between; /* Distribute space between the items */
+  gap: 2rem; /* Space between each card */
+  padding: 2rem 0; /* Optional: Add padding for top and bottom */
+}
+
+.section-courses .course-card {
+  flex: 1; /* Make each card take equal space */
+  max-width: 18%; /* Ensure each card does not exceed a certain width */
+  text-align: center;
+  padding: 2rem;
+  background: #fff; /* Optional: Add background color */
+  border-radius: 0.8rem; /* Optional: Add border radius */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow */
+}
+
+.section-courses .course-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.6rem;
+}
+
+.section-courses .course-card h3 {
+  margin-bottom: 1.2rem;
+  font-size: 2rem;
+}
+
+.section-testimonials {
+  background-color: var(--bg-color);
+  padding: 4rem 0;
+}
+
+.testimonial {
+  text-align: center;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+  margin-bottom: 1.6rem;
+  font-size: 1.4rem;
+}
+
+.testimonial p:last-child {
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+
+
+/* Add other styles as necessary */
 
 /* Analytics Section */
 
@@ -157,93 +328,6 @@ button:hover {
 .section-analytics p {
   text-transform: capitalize;
 }
-
-/* Course Highlights Section */
-
-/* index.css */
-
-/* index.css */
-
-.section-hero {
-  position: relative;
-  padding: 2rem 0;
-}
-
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.hero-carousel, .hero-form {
-  width: 55%; /* Adjust the width as needed to make both elements fit better */
-}
-
-.hero-carousel .carousel-item {
-  position: relative;
-  border-radius: 5px;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  height: 400px; /* Set a fixed height for the carousel items */
-}
-
-.hero-carousel .carousel-item img {
-  width: 100%;
-  height: 100%; /* Ensure the image fills the container */
-  object-fit: cover; /* Fill the container while maintaining aspect ratio */
-}
-
-
-.carousel-text-overlay {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  font-size: 2rem; /* Increase font size */
-  text-align: center;
-}
-
-.hero-form {
-  background: #f9f9f9;
-  padding: 2rem;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.form-group {
-  margin-bottom: 1rem;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.form-group input,
-.form-group select {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.btn.primary-btn {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn.primary-btn:hover {
-  background-color: #0056b3;
-}
-
-
-/* Add other styles as necessary */
-
 .section-analytics {
   padding: 1rem 0;
 }
@@ -289,34 +373,19 @@ button:hover {
   overflow: hidden; /* Ensure that content doesn't overflow */
 }
 
-.section-courses .course-carousel .slick-slide {
-  margin-right: 20px; /* Add margin between cards */
-}
 
-.section-courses .course-carousel .slick-slide:last-child {
-  margin-right: 0; /* Remove margin from the last card to avoid extra space */
-}
-
-.section-courses .course-carousel .slick-list {
-  margin: 0 -10px; /* Adjust margin for the carousel */
-}
 
 .section-courses .course-card {
   text-align: center;
-  padding: 20px;
+  padding: 20px; /* Increase padding */
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-right: 20px; /* Add margin between cards */
+  width: 250px; /* Set a fixed width for each card */
+  height: 300px; /* Set a fixed height for each card */
 }
 
-.section-courses .course-card:first-child {
-  margin-left: 20px; /* Add margin to the first card */
-}
 
-.section-courses .course-card:last-child {
-  margin-right: 0; /* Remove margin from the last card to avoid extra space */
-}
 
 .section-courses .course-card img {
   width: 100%;
@@ -327,6 +396,7 @@ button:hover {
 
 .section-courses .course-card h3 {
   font-size: 18px;
+  
   margin-bottom: 10px;
 }
 
@@ -342,7 +412,10 @@ button:hover {
   margin-bottom: 20px;
 }
 
-.center {
+.center { 
+  margin-top: 30px;
+  margin-bottom: 30px;
+
   font-size: 28px; /* Adjust the font size as needed */
   text-align: center; /* Align the heading to the center */
 }
@@ -504,54 +577,53 @@ button:hover {
   }
 }
 
-.section-hero.about-hero {
-  background: url('/images/about-hero.jpg') center/cover no-repeat;
-  padding: 100px 0;
-  text-align: center;
-  color: white;
-}
-
-.section-hero.about-hero h1 {
-  font-size: 3rem;
-  margin: 0;
-}
-
-.section-about-us, .section-statistics {
+.section-about-us-new, .section-statistics-new {
   padding: 50px 0;
 }
 
-.section-about-us .container, .section-statistics .container {
+.container-new {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
-.section-about-us h2, .section-statistics h2 {
+.about-us-heading {
+  text-align: center;
+  font-weight: bold;
+  font-size: 3em;
+}
+
+.about-paragraph {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.statistics-heading {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
-.section-about-us p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.section-statistics .grid-three-cols {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+.statistics-content-new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
-.section-statistics .stat-item h3 {
-  font-size: 2rem;
+.stat-item-new {
+  margin-bottom: 20px;
+}
+
+.stat-number {
+  font-size: 2.5rem;
   margin: 0;
 }
 
-.section-statistics .stat-item p {
-  font-size: 1.2rem;
+.stat-text {
+  font-size: 1.5rem;
   margin: 10px 0 0;
 }
 
