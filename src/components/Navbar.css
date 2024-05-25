@@ -57,41 +57,62 @@ ul li:last-child {
     margin-right: 0; /* Remove margin from the last item */
 }
 
-/* Style for vertical dropdown */
-.dropdown.vertical {
+/* Style for the dropdown trigger */
+.react-nested-dropdown__trigger {
+    cursor: pointer;
+}
+
+/* Style for the main dropdown */
+.react-nested-dropdown__menu {
     display: none; /* Initially hide the dropdown */
     position: absolute;
     top: 100%; /* Position dropdown below its parent */
-    left: 50%; /* Start at the center of the parent item */
-    transform: translateX(-50%); /* Center the dropdown horizontally */
+    left: 0; /* Align to the left of the parent item */
     background-color: #ffffff; /* Background color of dropdown */
     box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1); /* Add box shadow for a subtle effect */
     z-index: 1000; /* Ensure dropdown is above other elements */
     padding: 0.5rem 0; /* Add padding inside the dropdown */
     border-radius: 0.5rem; /* Add border-radius for rounded corners */
-    width: max-content; /* Set width to fit content */
+    width: 200px; /* Set width to fit content */
     overflow: hidden;
+    display: flex; /* Use flex to display the dropdown */
+    flex-direction: column; /* Ensure the dropdown is vertical */
 }
 
-/* Style for each item in vertical dropdown */
-.dropdown.vertical li {
+/* Show the dropdown when the parent is active */
+.react-nested-dropdown__menu--open {
+    display: flex; /* Use flex to display the dropdown */
+}
+
+/* Style for each item in the dropdown */
+.react-nested-dropdown__item {
     padding: 0.5rem 1rem; /* Add padding to each item */
     white-space: nowrap; /* Prevent text wrapping */
 }
 
-/* Style for hovered item in vertical dropdown */
-.dropdown.vertical li:hover {
+/* Style for hovered item in the dropdown */
+.react-nested-dropdown__item:hover {
     background-color: #f0f0f0; /* Change background color on hover */
 }
 
-/* Style for the last item in vertical dropdown */
-.dropdown.vertical li:last-child {
-    border-radius: 0 0 0.5rem 0.5rem; /* Add border-radius only to the bottom corners */
+/* Style for nested dropdowns */
+.react-nested-dropdown__menu .react-nested-dropdown__menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1); /* Add box shadow for a subtle effect */
 }
 
-/* Show the dropdown when hovering over the parent item */
-ul li:hover .dropdown.vertical {
-    display: block;
+/* Custom styles to ensure main dropdown items are vertical */
+.react-nested-dropdown__menu--root {
+    flex-direction: column; /* Ensure the root dropdown is vertical */
+}
+
+/* Ensure nested dropdowns are vertical */
+.react-nested-dropdown__menu--nested {
+    flex-direction: column; /* Ensure nested dropdowns are vertical */
 }
 
 /* Responsive styles */
@@ -111,7 +132,7 @@ ul li:hover .dropdown.vertical {
         width: 100%;
     }
 
-    .dropdown.vertical {
+    .react-nested-dropdown__menu {
         position: static;
         width: 100%;
         box-shadow: none;
@@ -119,14 +140,9 @@ ul li:hover .dropdown.vertical {
         padding: 0;
     }
 
-    .dropdown.vertical li {
+    .react-nested-dropdown__item {
         width: 100%;
         padding: 1rem;
         border-bottom: 1px solid #ddd;
-    }
-
-    .dropdown.vertical li:last-child {
-        border-radius: 0;
-        border-bottom: none;
     }
 }
