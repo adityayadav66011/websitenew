@@ -78,7 +78,7 @@ export const Navbar = () => {
               <NavLink to="/about">About Us</NavLink>
             </li>
             <li>
-              <Dropdown items={programItems} containerWidth="200px" className="react-nested-dropdown__menu--root">
+              <Dropdown items={programItems} containerWidth="300px" className="react-nested-dropdown__menu--root">
                 {({ isOpen, onClick }) => (
                   <span onClick={onClick}>
                     Program {isOpen ? '▲' : '▼'}
