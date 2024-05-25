@@ -36,7 +36,7 @@ export const Navbar = () => {
       <div className="container">
         <div className="logo-brand">
           <NavLink to="/">
-            <img src="/images/WPS Photos(1).png" alt="LearnLeap Logo" className="logo-image" />
+            <img src="/images/3.png" alt="LearnLeap Logo" className="logo-image" />
           </NavLink>
         </div>
 
@@ -48,14 +48,12 @@ export const Navbar = () => {
             <li>
               <NavLink to="/about">About Us</NavLink>
             </li>
-            <li>
-              <NavLink to="/contactus">Contact Us</NavLink>
-            </li>
+            
             <li
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <NavLink to="#">Courses</NavLink>
+              <NavLink to="#">Program</NavLink>
               {showCoursesDropdown && (
                 <ul className="dropdown vertical">
                   <li><NavLink to="/diplomaprogram">Diploma Program for Foundational Stage</NavLink></li>
@@ -65,6 +63,9 @@ export const Navbar = () => {
                   <li><NavLink to="/certificateleadership">Certificate Program In Education Leadership</NavLink></li>
                 </ul>
               )}
+            </li>
+            <li>
+              <NavLink to="/contactus">Contact Us</NavLink>
             </li>
           </ul>
         </nav>

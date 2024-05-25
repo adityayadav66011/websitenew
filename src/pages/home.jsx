@@ -1,26 +1,102 @@
 import React from 'react';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import '../index.css'; // Adjust the path according to your project structure
 
 export const Home = () => {
+  const carouselItems = [
+    {
+      image: '/images/homepage1.png',
+      text: 'Welcome to LearnLeap'
+    },
+    {
+      image: '/images/homepage2.png',
+      text: 'Delivered in online & Hybrid Mode '
+    },
+    {
+      image: '/images/homepage3.png',
+      text: 'Placement & Internship opportunities offered'
+    },
+    {
+      image: '/images/4.png',
+      text: 'Unlock your Potential with training led by a team of highly Recommended faculty '
+    },
+    {
+      image: '/images/5.png',
+      text: 'Elevate your teaching skills and English proficiency with LearnLeap'
+    },
+  ];
+
+  const courseItems = [
+    {
+      image: '/images/diplomafoundation.png',
+      title: 'Diploma Foundation',
+    },
+    {
+      image: '/images/certificatefoundation.png',
+      title: 'Certificate Foundation',
+    },
+    {
+      image: '/images/leadership.png',
+      title: 'Communicative',
+    },
+    {
+      image: '/images/communicative.png',
+      title: 'Leadership',
+    },
+    {
+      image: '/images/k12.png',
+      title: 'K12',
+    }
+  ];
+
+  const mainCarouselSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000
+  };
+
+  const courseCarouselSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
+
   return (
     <>
       {/* Hero Section */}
       <main>
         <section className="section-hero">
           <div className="container grid grid-two-cols">
-            <div className="hero-content">
-              <h1>Welcome to LearnLeap</h1>
-              <p>Your Gateway to Cutting-Edge courses on english and teaching </p>
-              <p>
-                Elevate your teaching skills and english proficiency with LearnLeap.
-              </p>
-              <div className="btn btn-group">
-                <a href="/contact">
-                  <button className="btn primary-btn">Connect Now</button>
-                </a>
-                <a href="/services">
-                  <button className="btn secondary-btn">Learn More</button>
-                </a>
-              </div>
+            <div className="hero-carousel">
+              <Slider {...mainCarouselSettings}>
+                {carouselItems.map((item, index) => (
+                  <div key={index} className="carousel-item">
+                    <img src={item.image} alt={`Carousel ${index}`} className="responsive-img" />
+                    <div className="carousel-text-overlay">
+                      <h2>{item.text}</h2>
+                    </div>
+                  </div>
+                ))}
+              </Slider>
             </div>
             <div className="hero-form">
               <form>
@@ -59,77 +135,68 @@ export const Home = () => {
           </div>
         </section>
 
+        <h2 className="center">  Our Presence & Offerings</h2>
+
         {/* Analytics Section */}
         <section className="section-analytics">
-          <div className="container grid grid-four-cols">
+          <div className="container grid grid-three-cols">
             <div className="analytics-item">
-              <h2>10+</h2>
-              <p>Happy Partners</p>
+              <img src="/images/1 (3).png" alt="K12 Schools" className="analytics-img" />
+              <h2>91 + K12 Schools</h2>
             </div>
             <div className="analytics-item">
-              <h2>100+</h2>
-              <p>Happy Clients</p>
+              <img src="/images/1 (1).png" alt="Preschools" className="analytics-img" />
+              <h2>101 + Preschools</h2>
             </div>
             <div className="analytics-item">
-              <h2>50+</h2>
-              <p>Developers</p>
-            </div>
-            <div className="analytics-item">
-              <h2>24/7</h2>
-              <p>Services</p>
+              <img src="/images/2.png" alt="Courses" className="analytics-img" />
+              <h2>5 Courses</h2>
             </div>
           </div>
         </section>
 
-        <section className="section-courses">
+|              <h2 className="popular-courses-heading">List of courses </h2>
+
+  {/* Courses Section */}
+  <section className="section-courses">
+          <div className="container">
+            <div className="heading-wrapper">
+            </div>
+            <div className="course-carousel">
+              <Slider {...courseCarouselSettings}>
+                {courseItems.map((course, index) => (
+                  <div key={index} className="course-card">
+                    <img src={course.image} alt={`Course ${index}`} className="responsive-img" />
+                    <h3>{course.title}</h3>
+                    <p>{course.description}</p>
+                  </div>
+                ))}
+              </Slider>
+            </div>
+          </div>
+        </section>
+
+
+        <h2 className="center">What Our Clients Say</h2>
+
+        {/* Testimonials Section */}
+        <section className="section-testimonials">
   <div className="container">
-    <div className="heading-wrapper">
-      <h2 className="center">Popular Courses</h2>
-    </div>
-    <div className="grid grid-three-cols">
-      <div className="course-card">
-        <img src="/images/teacher.jpg" alt="Course 1" className="responsive-img" />
-        <h3>Certificate Program for teaching Skills.
-</h3>
-        <p>Learn to build modern web applications using the latest technologies.</p>
+ 
+    <div className="grid grid-two-cols">
+      <div className="testimonial">
+        <p>"LearnLeap transformed our IT teaching skills. Highly recommended!"</p>
+        <p>- Alex Johnson</p>
       </div>
-      <div className="course-card">
-        <img src="/images/communication.jpg" alt="Course 2" className="responsive-img" />
-        <h3>Certificate Program In Communicative English
-</h3>
-        <p>Master data analysis and machine learning techniques to excel in the data-driven world.</p>
-      </div>
-      <div className="course-card">
-        <img src="/images/leadership.svg" alt="Course 3" className="responsive-img" />
-        <h3>Certificate Program In Education Leadership 
-</h3>
-        <p>Protect systems and networks with advanced cybersecurity practices.</p>
+      <div className="testimonial">
+        <p>"The team at LearnLeap is incredibly skilled and professional."</p>
+        <p>- Maria Davis</p>
       </div>
     </div>
   </div>
 </section>
 
-
-        {/* Testimonials Section */}
-        <section className="section-testimonials">
-          <div className="container">
-            <h2 className="center">What Our Clients Say</h2>
-            <div className="grid grid-two-cols">
-              <div className="testimonial">
-                <p>"LearnLeap transformed our IT teaching sklills. Highly recommended!"</p>
-                <p>- Alex Johnson</p>
-              </div>
-              <div className="testimonial">
-                <p>"The team at LearnLeap is incredibly skilled and professional."</p>
-                <p>- Maria Davis</p>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
-
-      {/* Footer Section */}
-      
     </>
   );
 };
