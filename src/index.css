@@ -249,12 +249,11 @@ li {
 }
 
 .hero-carousel {
-  position: absolute;
-  width: 100%;
+  flex: 1;
   height: 100%;
-  top: 50%; /* Adjusted top position */
-  transform: translateY(-50%);
+  position: relative;
 }
+
 
 
 .carousel-item img {
