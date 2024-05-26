@@ -31,23 +31,23 @@ export const Home = () => {
   const courseItems = [
     {
       image: '/images/diplomafoundation.png',
-      title: 'Diploma Foundation',
+      title: 'Diploma in Foundation',
     },
     {
       image: '/images/certificatefoundation.png',
-      title: 'Certificate Foundation',
+      title: 'Certificate in Foundation',
     },
     {
       image: '/images/leadership.png',
-      title: 'Communicative',
+      title: 'Certificate in Leadership',
     },
     {
       image: '/images/communicative.png',
-      title: 'Leadership',
+      title: 'Certificate in Communicative English',
     },
     {
       image: '/images/k12.png',
-      title: 'K12',
+      title: 'Certificate for K12 Teachin skills',
     }
   ];
 

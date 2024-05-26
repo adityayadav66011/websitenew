@@ -1,61 +1,90 @@
+/* General Styles for Footer */
 footer {
-    background-color: black;
-    color: white;
-    padding-top: 3.2rem;
-    margin-top: auto;
-    display: flex;
+  background-color: black;
+  color: white;
+  padding-top: 3.2rem;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.footer-column {
+  flex: 1;
+  padding: 1rem;
+  min-width: 280px; /* Ensures columns are not too narrow on smaller screens */
+  display: flex;
+  flex-direction: column; /* Ensures vertical alignment of content */
+}
+
+.footer-column h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  
+}
+
+.footer-column ul {
+  list-style-type: none;
+  padding: 0;
+  flex-direction: column; /* Ensures vertical alignment of content */
+
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column p {
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  border-top: 1px solid #444;
+}
+
+iframe {
+  border: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer-section {
     flex-direction: column;
     align-items: center;
   }
-  
-  .footer-section {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 1200px;
-  }
-  
+
   .footer-column {
-    flex: 1;
-    padding: 1rem;
+    min-width: 100%; /* Columns take full width on smaller screens */
+    padding: 1rem 0;
   }
-  
-  .footer-column h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .footer-column ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .footer-column ul li {
-    margin-bottom: 8px;
-  }
-  
-  .footer-column p {
-    margin-bottom: 10px;
-  }
-  
+
   .social-icons {
-    display: flex;
-    gap: 10px;
+    justify-content: center;
   }
-  
-  .social-icons a img {
-    width: 24px;
-    height: 24px;
-  }
-  
-  .footer-bottom {
-    text-align: center;
-    padding: 1rem;
-    width: 100%;
-    border-top: 1px solid #444;
-  }
-  
-  iframe {
-    border: none;
-  }
-  
+}

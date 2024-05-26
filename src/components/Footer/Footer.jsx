@@ -6,19 +6,23 @@ export const Footer = () => {
     <footer>
       <div className="footer-section">
         <div className="footer-column">
-          <h2>About Us</h2>
+          <h2>Programs</h2>
           <ul>
-            <li>About Us</li>
-            <li>Partner with Us</li>
-            <li>Alumni Area</li>
-            <li>Media</li>
-            <li>Career</li>
+            <li>Diploma for Foundation Stage</li>
+            <li>Certificate for foundational Stage </li>
+            <li>Certificate for teaching Skills.</li>
+            <li>Certificate In Communicative English</li>
+            <li>Certificate In Education Leadership </li>
           </ul>
         </div>
         <div className="footer-column">
           <h2>Contact Us</h2>
-          <p>Email: example@example.com</p>
-          <p>Address: 1234 Street Name, City, Country</p>
+          <div className="contact-info">
+            <p>Email: franchise@birlaopenminds.com</p>
+            <p>Email: pds.training@birlaopenminds.com</p>
+            <p>Phone: 7977153104</p>
+            <p>Address: Piramal Tower, 9th Floor, 901, B Wing, Peninsula Corporate Park, Lower Parel (W), Mumbai - 400013</p>
+          </div>
           <div className="social-icons">
             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
               <img src="/images/facebook.png" alt="Facebook" />
