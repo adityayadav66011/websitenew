@@ -2,8 +2,15 @@ import React from "react";
 
 const CertificateProgram = () => {
   return (
-    <div className="certificate-program-container">
-      <h1 className="certificate-program-heading">Certificate Program for Foundation Stage</h1>
+    <div className="diploma-program-container">
+      <h1 className="diploma-program-heading">Certificate Program for Foundation Stage</h1>
+      <div className="image-section">
+        <img
+          className="diploma-program-image"
+          src="/images/certificatefoundation.png"
+          alt="Certificate Program Image"
+        />
+      </div>
       <div className="vertical-headings">
         <div className="detail-section">
           <h2 className="centered-heading">Course Details</h2>

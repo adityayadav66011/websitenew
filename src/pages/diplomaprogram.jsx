@@ -4,6 +4,13 @@ const DiplomaProgram = () => {
   return (
     <div className="diploma-program-container">
       <h1 className="diploma-program-heading">Diploma Program for Foundation Stage</h1>
+      <div className="image-section">
+        <img
+          className="diploma-program-image"
+          src="/images/diplomafoundation.png"
+          alt="Diploma Program Image"
+        />
+      </div>
       <div className="vertical-headings">
         <div className="detail-section">
           <h2 className="centered-heading">Course Details</h2>
@@ -30,7 +37,6 @@ const DiplomaProgram = () => {
                   Personal Effectiveness  
                   <br />
                   Cognitive Coaching
-                  
                 </td>
                 <td>Hybrid</td>
               </tr>
@@ -43,15 +49,12 @@ const DiplomaProgram = () => {
             <tbody>
               <tr>
                 <th>Eligibility</th>
-                
               </tr>
               <tr>
                 <td>Undergraduate 12th pass</td>
-             
               </tr>
               <tr>
                 <td>Graduate</td>
-                
               </tr>
             </tbody>
           </table>

@@ -2,8 +2,15 @@ import React from "react";
 
 const CertificateProgramLeadership = () => {
   return (
-    <div className="certificate-program-container">
-      <h1 className="certificate-program-heading">Certificate Program for Education Leadership</h1>
+    <div className="diploma-program-container">
+      <h1 className="diploma-program-heading">Certificate Program for Education Leadership</h1>
+      <div className="image-section">
+        <img
+          className="diploma-program-image"
+          src="/images/leadership.png"
+          alt="Certificate Program Image"
+        />
+      </div>
       <div className="vertical-headings">
         <div className="detail-section">
           <h2 className="centered-heading">Course Details</h2>
@@ -44,7 +51,7 @@ const CertificateProgramLeadership = () => {
                 <th>Eligibility</th>
               </tr>
               <tr>
-                <td>Post Graduate with B.ED & Min 5 years of relevant experience</td>
+                <td>Post Graduate with B.Ed & Min 5 years of relevant experience</td>
               </tr>
             </tbody>
           </table>

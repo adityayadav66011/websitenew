@@ -4,6 +4,13 @@ const CertificateProgramK12TeachingSkills = () => {
   return (
     <div className="diploma-program-container">
       <h1 className="diploma-program-heading">Certificate Program for K12 Teaching Skills</h1>
+      <div className="image-section">
+        <img
+          className="diploma-program-image"
+          src="/images/k12.png"
+          alt="Certificate Program Image"
+        />
+      </div>
       <div className="vertical-headings">
         <div className="detail-section">
           <h2 className="centered-heading">Course Details</h2>

@@ -661,60 +661,150 @@ li {
 }
 
 /* Add CSS rules for the DiplomaProgram component */
+/* DiplomaProgram.css */
+
+
+/* DiplomaProgram.css */
+
+/* General Styles */
 .diploma-program-container {
-  padding: 10px;
-  font-family: Arial, sans-serif;
+  margin: 2rem 0; /* Adds vertical margin around the container */
+  padding: 0 1rem; /* Adds horizontal padding inside the container */
+  font-size: 1.125rem; /* Increases the base font size */
+  line-height: 1.6; /* Adds a comfortable line height for readability */
 }
 
-.diploma-program-heading {
-  text-align: center;
-  font-size: 34px;
-  margin-bottom: 50px;
+/* Image Section */
+.image-section {
+  width: 100%; /* Ensures the section takes up the full width of its container */
+  height: 65vh; /* Adjust the height to cover the desired area */
+  overflow: hidden; /* Hides any overflow content */
+  display: flex; /* Enables flexbox layout for centering */
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  border-radius: 1rem 1rem 0 0; /* Adds rounded corners to the top of the section */
 }
 
-.vertical-headings {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center align the detail sections */
-}
-
-.detail-section {
-  width: 100%; /* Make the detail sections take full width */
-  max-width: 800px; /* Optionally, set a max width */
-  margin-bottom: 20px;
-}
-
-.detail-section h2 {
-  font-size: 30px;
-  text-align: center; /* Center align the headings */
-  margin-bottom: 10px;
-}
-
-.detail-section table {
+.diploma-program-image {
   width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-   font-size: 13px;
+  height: 100%;
+  object-fit: cover;
+  object-position: top; /* Aligns the image to the bottom of the container */
+  display: block;
 }
 
-.detail-section table th,
-.detail-section table td {
-  border: 2px solid #ddd;
-  padding: 8px;
-  text-align: left;
+
+/* Heading Styles */
+.diploma-program-heading {
+  font-size: 3.5rem; /* Sets the font size for the main heading */
+  text-align: center; /* Centers the text */
+  margin: 2rem 0; /* Adds vertical margin above and below the heading */
+  color: var(--dark-color); /* Sets the text color using a CSS variable */
 }
 
-.detail-section table th {
-  background-color: #f2f2f2;
+/* Vertical Headings */
+.vertical-headings {
+  display: flex; /* Enables flexbox layout */
+  flex-direction: column; /* Arranges items in a column */
+  align-items: center; /* Centers items horizontally */
 }
 
-.detail-section ul {
-  padding-left: 20px;
+/* Detail Section Styles */
+.detail-section {
+  margin-bottom: 2rem; /* Adds vertical margin below each detail section */
+  width: 100%; /* Ensures each section takes up the full width of its container */
+  max-width: 800px; /* Limits the maximum width of each section */
 }
 
-.detail-section ul li {
-  margin-bottom: 5px;
+.centered-heading {
+  font-size: 2.25rem; /* Sets the font size for centered headings */
+  text-align: center; /* Centers the text */
+  margin-bottom: 1rem; /* Adds vertical margin below the heading */
+  color: var(--dark-color); /* Sets the text color using a CSS variable */
 }
+
+table {
+  width: 100%; /* Makes the table take up the full width of its container */
+  border-collapse: collapse; /* Collapses the table borders */
+  margin: 0 auto; /* Centers the table horizontally */
+}
+
+th,
+td {
+  padding: 1rem; /* Adds padding inside table cells */
+  border: 1px solid var(--dark-color); /* Adds a border to table cells */
+  font-size: 1.7rem; /* Ensures table text is readable */
+}
+
+th {
+  background-color: var(--bg-color); /* Sets the background color of table headers */
+  color: var(--dark-color); /* Sets the text color of table headers */
+  font-weight: bold; /* Makes the table header text bold */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .diploma-program-heading {
+    font-size: 3.5rem; /* Adjusts the font size for smaller screens */
+  }
+
+  .centered-heading {
+    font-size: 2rem; /* Adjusts the font size for smaller screens */
+  }
+
+  th, td {
+    font-size: 1.5rem; /* Adjusts the font size for table cells */
+  }
+}
+
+@media (max-width: 992px) {
+  .diploma-program-heading {
+    font-size: 3rem; /* Adjusts the font size for smaller screens */
+  }
+
+  .centered-heading {
+    font-size: 1.8rem; /* Adjusts the font size for smaller screens */
+  }
+
+  th, td {
+    padding: 0.8rem; /* Adjusts the padding for smaller screens */
+    font-size: 1.4rem; /* Adjusts the font size for table cells */
+  }
+}
+
+@media (max-width: 768px) {
+  .diploma-program-heading {
+    font-size: 2.5rem; /* Adjusts the font size for smaller screens */
+  }
+
+  .centered-heading {
+    font-size: 1.6rem; /* Adjusts the font size for smaller screens */
+  }
+
+  th, td {
+    padding: 0.6rem; /* Adjusts the padding for smaller screens */
+    font-size: 1.4rem; /* Adjusts the font size for table cells */
+  }
+}
+
+@media (max-width: 576px) {
+  .diploma-program-heading {
+    font-size: 2rem; /* Adjusts the font size for smaller screens */
+  }
+
+  .centered-heading {
+    font-size: 1.4rem; /* Adjusts the font size for smaller screens */
+  }
+
+  th, td {
+    padding: 0.5rem; /* Adjusts the padding for smaller screens */
+    font-size: 1.4rem; /* Adjusts the font size for table cells */
+  }
+}
+
+
+
+/* new certificate programsection*/
 
 .certificate-program-container {
   padding: 20px;
