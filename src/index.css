@@ -1155,6 +1155,7 @@ th {
 .contact-form-box form {
   display: flex;
   flex-direction: column;
+  text-align: left; /* Align form text to the left */
 }
 
 .form-group {
