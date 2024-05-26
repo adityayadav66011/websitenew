@@ -86,7 +86,7 @@ export const Home = () => {
           </div>
           <div className="hero-form-overlay">
             <form>
-              <h2>Enquiry Form</h2>
+              <h2></h2>
               <div className="form-group">
                 <label htmlFor="name">Name</label>
                 <input type="text" id="name" name="name" required />
@@ -120,19 +120,7 @@ export const Home = () => {
           </div>
         </section>
 
-         {/* About LearnLeap Section */}
-         <section className="section-about-learnleap">
-          <div className="container">
-            <h2>About LearnLeap</h2>
-            <p>
-              We aim to enhance teacher's skills for Foundational, Preparatory, Middle, and Secondary stages as per the new school structure of NEP. 
-              In our pursuit of excellence in education, we recognize that empowering teachers is key to unlocking the full potential of our participants.
-              Hence, we are proud to introduce our Online Teacher Enhancement courses like Diploma and Certificate courses in Foundation/ECCED, Teacher Training 
-              and also providing Leadership Development Certificate Course - a virtual gateway to a world of growth, innovation, and continuous learning for educators like you.
-            </p>
-            <a href="/about" className="btn primary-btn">Learn More</a>
-          </div>
-        </section>
+
 
 
         {/* Analytics Section */}
@@ -156,7 +144,7 @@ export const Home = () => {
           </div>
         </section>
 
-        <h2 className="popular-courses-heading">List of courses</h2>
+        <h2 className="popular-courses-heading">Popular Programs</h2>
 
         {/* Courses Section */}
         <section className="section-courses">
@@ -174,24 +162,7 @@ export const Home = () => {
           </div>
         </section>
 
-        <h2 className="center">What Our Clients Say</h2>
-
-        {/* Testimonials Section */}
-{/* Testimonials Section */}
-<section className="section-testimonials">
-  <div className="container">
-    <div className="grid grid-two-cols">
-      <div className="testimonial-item">
-        <p>"LearnLeap transformed our IT teaching skills. Highly recommended!"</p>
-        <p>- Alex Johnson</p>
-      </div>
-      <div className="testimonial-item">
-        <p>"The team at LearnLeap is incredibly skilled and professional."</p>
-        <p>- Maria Davis</p>
-      </div>
-    </div>
-  </div>
-</section>
+       
 
 
        
