@@ -1,47 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Dropdown } from "react-nested-dropdown";
-import 'react-nested-dropdown/dist/styles.css';
 import "./Navbar.css";
 
-const programItems = [
-  {
-    label: 'Educators',
-    items: [
-      {
-        label: 'Diploma Program for Foundational Stage',
-        onSelect: () => window.location.href = '/diplomaprogram',
-      },
-      {
-        label: 'Certificate Program for Foundational Stage',
-        onSelect: () => window.location.href = '/certificatefoundational',
-      },
-      {
-        label: 'Certificate Program for Teaching Skills',
-        onSelect: () => window.location.href = '/certificateteaching',
-      },
-      {
-        label: 'Certificate Program In Communicative English',
-        onSelect: () => window.location.href = '/certificateenglish',
-      },
-    ],
-  },
-  {
-    label: 'School Leaders',
-    items: [
-      {
-        label: 'Certificate Program In Education Leadership',
-        onSelect: () => window.location.href = '/certificateleadership',
-      },
-      {
-        label: 'Certificate Program In Communicative English',
-        onSelect: () => window.location.href = '/certificateenglish',
-      },
-    ],
-  },
-];
-
 export const Navbar = () => {
+  const [showProgramDropdown, setShowProgramDropdown] = useState(false);
+  const [showEducatorsDropdown, setShowEducatorsDropdown] = useState(false);
+  const [showSchoolLeadersDropdown, setShowSchoolLeadersDropdown] = useState(false);
+
+  const handleMouseEnter = (setter) => () => {
+    setter(true);
+  };
+
+  const handleMouseLeave = (setter) => () => {
+    setter(false);
+  };
+
   return (
     <header>
       <div className="social-bar">
@@ -77,14 +50,65 @@ export const Navbar = () => {
             <li>
               <NavLink to="/about">About Us</NavLink>
             </li>
-            <li>
-              <Dropdown items={programItems} containerWidth="300px" className="react-nested-dropdown__menu--root">
-                {({ isOpen, onClick }) => (
-                  <span onClick={onClick}>
-                    Program {isOpen ? '▲' : '▼'}
-                  </span>
-                )}
-              </Dropdown>
+            <li
+              onMouseEnter={handleMouseEnter(setShowProgramDropdown)}
+              onMouseLeave={handleMouseLeave(setShowProgramDropdown)}
+            >
+              <NavLink to="#">Program</NavLink>
+              {showProgramDropdown && (
+                <ul className="dropdown vertical">
+                  <li
+                    onMouseEnter={handleMouseEnter(setShowEducatorsDropdown)}
+                    onMouseLeave={handleMouseLeave(setShowEducatorsDropdown)}
+                  >
+                    <NavLink to="#">Educators</NavLink>
+                    {showEducatorsDropdown && (
+                      <ul className="nested-dropdown vertical">
+                        <li>
+                          <NavLink to="/diplomaprogram">
+                            Diploma Program for Foundational Stage
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink to="/certificatefoundational">
+                            Certificate Program for Foundational Stage
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink to="/certificateteaching">
+                            Certificate Program for Teaching Skills
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink to="/certificateenglish">
+                            Certificate Program In Communicative English
+                          </NavLink>
+                        </li>
+                      </ul>
+                    )}
+                  </li>
+                  <li
+                    onMouseEnter={handleMouseEnter(setShowSchoolLeadersDropdown)}
+                    onMouseLeave={handleMouseLeave(setShowSchoolLeadersDropdown)}
+                  >
+                    <NavLink to="#">School Leaders</NavLink>
+                    {showSchoolLeadersDropdown && (
+                      <ul className="nested-dropdown vertical">
+                        <li>
+                          <NavLink to="/certificateleadership">
+                            Certificate Program In Education Leadership
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink to="/certificateenglish">
+                            Certificate Program In Communicative English
+                          </NavLink>
+                        </li>
+                      </ul>
+                    )}
+                  </li>
+                </ul>
+              )}
             </li>
             <li>
               <NavLink to="/contactus">Contact Us</NavLink>
