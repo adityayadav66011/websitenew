@@ -14,15 +14,21 @@ export const AboutUs = () => {
       <section className="section-about-us-content-new">
         <div className="container-new">
           <div className="about-content-new">
-            <p className="about-paragraph">
-              We aim to enhance teacher's skills for Foundational, Preparatory, Middle, and Secondary stages as per the new school structure of NEP. In our pursuit of excellence in education, we recognize that empowering teachers is key to unlocking the full potential of our participants.
-            </p>
-            <p className="about-paragraph">
-              Hence, we are proud to introduce our Online Teacher Enhancement courses like Diploma and Certificate courses in Foundation/ECCED, Teacher Training and also providing Leadership Development Certificate Course - a virtual gateway to a world of growth, innovation, and continuous learning for educators like you.
-            </p>
-            <p className="about-paragraph">
-              We stand at the forefront of shaping the next generation of leaders, thinkers, and innovators. Rooted in a legacy of nation-building, our philosophy focuses on holistic education, nurturing young minds to excel academically and beyond.
-            </p>
+            <div className="mission-content">
+              <h2>Our Mission</h2>
+              <p className="about-paragraph">
+                We aim to enhance teacher's skills for Foundational, Preparatory, Middle, and Secondary stages as per the new school structure of NEP. In our pursuit of excellence in education, we recognize that empowering teachers is key to unlocking the full potential of our participants.
+              </p>
+              <p className="about-paragraph">
+                Hence, we are proud to introduce our Online Teacher Enhancement courses like Diploma and Certificate courses in Foundation/ECCED, Teacher Training and also providing Leadership Development Certificate Course - a virtual gateway to a world of growth, innovation, and continuous learning for educators like you.
+              </p>
+              <p className="about-paragraph">
+                We stand at the forefront of shaping the next generation of leaders, thinkers, and innovators. Rooted in a legacy of nation-building, our philosophy focuses on holistic education, nurturing young minds to excel academically and beyond.
+              </p>
+            </div>
+            <div className="mission-image">
+              <img src="/images/ABOUTUS.jpeg" alt="Our Mission" />
+            </div>
           </div>
         </div>
       </section>
