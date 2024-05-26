@@ -144,23 +144,24 @@ export const Home = () => {
           </div>
         </section>
 
-        <h2 className="popular-courses-heading">Popular Programs</h2>
 
         {/* Courses Section */}
-        <section className="section-courses">
-          <div className="container">
-            <div className="heading-wrapper"></div>
-            <div className="course-list">
-              {courseItems.map((course, index) => (
-                <div key={index} className="course-card">
-                  <img src={course.image} alt={`Course ${index}`} className="responsive-img" />
-                  <h3>{course.title}</h3>
-                  <p>{course.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+<section className="section-courses">
+<h2 className="center">Popular Programs</h2>
+
+  <div className="container">
+    <div className="course-list">
+      {courseItems.map((course, index) => (
+        <div key={index} className="course-card">
+          <img src={course.image} alt={`Course ${index}`} className="responsive-img" />
+          <h3>{course.title}</h3>
+          <p>{course.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       </main>
     </>
