@@ -229,57 +229,6 @@ li {
   background-color: #004f8a;
 }
 
-.section-analytics {
-  padding: 4rem 0;
-}
-
-.section-analytics .container {
-  display: flex;
-  justify-content: space-around;
-}
-
-.section-analytics .analytics-item {
-  text-align: center;
-}
-
-.section-analytics .analytics-img {
-  max-width: 100%;
-  height: auto;
-}
-
-
-.section-about-learnleap {
-  padding: 4rem 0;
-  background-color: #ffffff;
-}
-
-.section-about-learnleap .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.section-about-learnleap h2 {
-  font-size: 3.5rem;
-
-  margin-bottom: 3rem;
-}
-
-.section-about-learnleap p {
-  font-size: 1.4rem;
-  line-height: 1.6;
-  margin-bottom: 2rem;
-}
-
-.section-about-learnleap .btn.primary-btn {
-  width: auto;
-  display: inline-block;
-  padding: 1rem 2rem;
-}
-
 .highlight {
   color: #005EA0;
 }
@@ -356,35 +305,6 @@ li {
 }
 
 
-.section-testimonials {
-  background-color: var(--bg-color);
-  padding: 4rem 0;
-}
-
-.section-testimonials .container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.testimonial-item {
-  width: 100%; /* Adjust the width to make it more rectangular */
-  background: #fff;
-  padding: 2rem;
-  border-radius: 0.8rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 1rem 0; /* Add margin for spacing */
-}
-
-.testimonial-item p {
-  margin-bottom: 1.6rem;
-  font-size: 1.4rem;
-}
-
-.testimonial-item p:last-child {
-  margin-bottom: 0;
-  font-style: italic;
-}
 
 
 
@@ -393,29 +313,30 @@ li {
 /* Add other styles as necessary */
 
 /* Analytics Section */
-
 .section-analytics {
   margin: 2rem 0;
+  padding: 4rem 0 1rem; /* Adjusted padding */
   background-color: var(--bg-color); /* Apply background color to the section */
   border-radius: 1rem;
-  padding: 1rem 0; /* Add padding for better spacing */
 }
 
 .section-analytics .container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Ensure the items wrap for smaller screens */
   border-radius: 1rem;
 }
 
-.section-analytics .grid {
-  color: var(--dark-color);
-  text-align: center;
-}
-
 .section-analytics .analytics-item {
+  text-align: center;
+  flex: 1 1 20%; /* Flexbox properties to allow wrapping and spacing */
+  padding: 1rem;
+  box-sizing: border-box; /* Include padding in width calculation */
   border-right: 0.2rem solid var(--dark-color);
 }
 
 .section-analytics .analytics-item:last-child {
-  border: none;
+  border-right: none;
 }
 
 .section-analytics h2 {
@@ -429,23 +350,81 @@ li {
 
 .section-analytics p {
   text-transform: capitalize;
-}
-
-.analytics-item {
-  text-align: center;
-  margin-bottom: 2rem;
+  
 }
 
 .analytics-img {
   width: 35%;
-  max-width: auto; /* Adjust the maximum width as needed */
+  max-width: 100%; /* Ensure the image doesn't exceed its container */
   height: auto;
   margin-bottom: 1rem;
 }
 
 .analytics-item h2 {
-  font-size: 1.4rem; /* Adjust the font size as needed */
+  font-size: 2.3rem; /* Adjust the font size as needed */
+  /* Option to increase text size */
 }
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .section-analytics h2 {
+    font-size: 3rem; /* Adjust heading size for smaller screens */
+  }
+
+  .analytics-item h2 {
+    font-size: 1.3rem; /* Adjust item heading size for smaller screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .section-analytics h2 {
+    font-size: 2.5rem; /* Adjust heading size for smaller screens */
+  }
+
+  .analytics-item h2 {
+    font-size: 1.2rem; /* Adjust item heading size for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .section-analytics {
+    padding: 2rem 0; /* Reduce padding for smaller screens */
+  }
+
+  .analytics-item {
+    flex: 1 1 45%; /* Adjust flex properties for better wrapping on smaller screens */
+    border-right: none;
+    border-bottom: 0.2rem solid var(--dark-color);
+  }
+
+  .analytics-item:last-child {
+    border-bottom: none;
+  }
+
+  .section-analytics h2 {
+    font-size: 2rem; /* Adjust heading size for smaller screens */
+  }
+
+  .analytics-item h2 {
+    font-size: 1.1rem; /* Adjust item heading size for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .analytics-item {
+    flex: 1 1 100%; /* Full width for the smallest screens */
+    border-bottom: none;
+  }
+
+  .section-analytics h2 {
+    font-size: 1.8rem; /* Adjust heading size for smallest screens */
+  }
+
+  .analytics-item h2 {
+    font-size: 1rem; /* Adjust item heading size for smallest screens */
+  }
+}
+
 
 
 /* Add other styles as necessary */
@@ -457,26 +436,6 @@ li {
 
   font-size: 28px; /* Adjust the font size as needed */
   text-align: center; /* Align the heading to the center */
-}
-
-
-/* Testimonials Section */
-
-.section-testimonials h2 {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-.testimonial {
-  padding: 2rem;
-  border: 0.1rem solid var(--dark-color);
-  border-radius: 1rem;
-  background-color: var(--bg-color);
-}
-
-.testimonial p {
-  font-size: 1.6rem;
-  margin-bottom: 1.2rem;
 }
 
 /* Contact Section */

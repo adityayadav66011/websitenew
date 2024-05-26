@@ -4,8 +4,6 @@ import "./Navbar.css";
 
 export const Navbar = () => {
   const [showProgramDropdown, setShowProgramDropdown] = useState(false);
-  const [showEducatorsDropdown, setShowEducatorsDropdown] = useState(false);
-  const [showSchoolLeadersDropdown, setShowSchoolLeadersDropdown] = useState(false);
 
   const handleMouseEnter = (setter) => () => {
     setter(true);
@@ -45,73 +43,53 @@ export const Navbar = () => {
         <nav>
           <ul>
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/" activeClassName="active">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/about">About Us</NavLink>
+              <NavLink to="/about" activeClassName="active">About Us</NavLink>
             </li>
             <li
               onMouseEnter={handleMouseEnter(setShowProgramDropdown)}
               onMouseLeave={handleMouseLeave(setShowProgramDropdown)}
             >
-              <NavLink to="#">Program</NavLink>
+              <NavLink to="#" activeClassName="active">Program</NavLink>
               {showProgramDropdown && (
                 <ul className="dropdown vertical">
-                  <li
-                    onMouseEnter={handleMouseEnter(setShowEducatorsDropdown)}
-                    onMouseLeave={handleMouseLeave(setShowEducatorsDropdown)}
-                  >
-                    <NavLink to="#">Educators</NavLink>
-                    {showEducatorsDropdown && (
-                      <ul className="nested-dropdown vertical">
-                        <li>
-                          <NavLink to="/diplomaprogram">
-                            Diploma Program for Foundational Stage
-                          </NavLink>
-                        </li>
-                        <li>
-                          <NavLink to="/certificatefoundational">
-                            Certificate Program for Foundational Stage
-                          </NavLink>
-                        </li>
-                        <li>
-                          <NavLink to="/certificateteaching">
-                            Certificate Program for Teaching Skills
-                          </NavLink>
-                        </li>
-                        <li>
-                          <NavLink to="/certificateenglish">
-                            Certificate Program In Communicative English
-                          </NavLink>
-                        </li>
-                      </ul>
-                    )}
+                  <li>
+                    <NavLink to="/diplomaprogram">
+                      Diploma Program for Foundational Stage
+                    </NavLink>
                   </li>
-                  <li
-                    onMouseEnter={handleMouseEnter(setShowSchoolLeadersDropdown)}
-                    onMouseLeave={handleMouseLeave(setShowSchoolLeadersDropdown)}
-                  >
-                    <NavLink to="#">School Leaders</NavLink>
-                    {showSchoolLeadersDropdown && (
-                      <ul className="nested-dropdown vertical">
-                        <li>
-                          <NavLink to="/certificateleadership">
-                            Certificate Program In Education Leadership
-                          </NavLink>
-                        </li>
-                        <li>
-                          <NavLink to="/certificateenglish">
-                            Certificate Program In Communicative English
-                          </NavLink>
-                        </li>
-                      </ul>
-                    )}
+                  <li>
+                    <NavLink to="/certificatefoundational">
+                      Certificate Program for Foundational Stage
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/certificateteaching">
+                      Certificate Program for Teaching Skills
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/certificateenglish">
+                      Certificate Program In Communicative English (Educator)
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/certificateleadership">
+                      Certificate Program In Education Leadership 
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/certificateenglish">
+                      Certificate Program In Communicative English (School Leaders)
+                    </NavLink>
                   </li>
                 </ul>
               )}
             </li>
             <li>
-              <NavLink to="/contactus">Contact Us</NavLink>
+              <NavLink to="/contactus" activeClassName="active">Contact Us</NavLink>
             </li>
           </ul>
         </nav>

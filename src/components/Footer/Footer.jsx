@@ -27,18 +27,14 @@ export const Footer = () => {
             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
               <img src="/images/facebook.png" alt="Facebook" />
             </a>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-              <img src="/images/twitter.png" alt="Twitter" />
-            </a>
+           
             <a href="mailto:someone@example.com">
               <img src="/images/gmail.png" alt="Gmail" />
             </a>
             <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
               <img src="/images/linkedin.png" alt="LinkedIn" />
             </a>
-            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-              <img src="/images/youtube.png" alt="YouTube" />
-            </a>
+          
           </div>
         </div>
         <div className="footer-column">
