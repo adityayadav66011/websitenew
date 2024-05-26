@@ -62,32 +62,32 @@ export const Navbar = () => {
                 <ul className="dropdown vertical">
                   <li>
                     <NavLink to="/diplomaprogram">
-                      Diploma Program for Foundational Stage
+                      Diploma for Foundational Stage
                     </NavLink>
                   </li>
                   <li>
                     <NavLink to="/certificatefoundational">
-                      Certificate Program for Foundational Stage
+                      Certificate for Foundational Stage
                     </NavLink>
                   </li>
                   <li>
                     <NavLink to="/certificateteaching">
-                      Certificate Program for Teaching Skills
+                      Certificate for Teaching Skills
                     </NavLink>
                   </li>
                   <li>
                     <NavLink to="/certificateenglish">
-                      Certificate Program In Communicative English (Educator)
+                      Certificate In Communicative English (Educator)
                     </NavLink>
                   </li>
                   <li>
                     <NavLink to="/certificateleadership">
-                      Certificate Program In Education Leadership 
+                      Certificate In Education Leadership 
                     </NavLink>
                   </li>
                   <li>
                     <NavLink to="/certificateenglish">
-                      Certificate Program In Communicative English (School Leaders)
+                      Certificate In Communicative English (School Leaders)
                     </NavLink>
                   </li>
                 </ul>
