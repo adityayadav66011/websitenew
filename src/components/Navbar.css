@@ -94,6 +94,8 @@ nav ul li a.active {
     display: none;
     position: absolute;
     top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #ffffff;
     box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -108,9 +110,7 @@ nav ul li a.active {
     white-space: nowrap;
     color: #005EA0;
     font-weight: normal;
-    font-size: 0.9rem; /* Adjust font size here */
-
-
+    font-size: 0.8rem; /* Adjust font size here */
 }
 
 .dropdown.vertical li:hover {
@@ -170,14 +170,13 @@ ul li:hover .dropdown.vertical {
         box-shadow: none;
         border-radius: 0;
         padding: 0;
+        transform: none; /* Remove transform for mobile view */
     }
 
     .dropdown.vertical li {
         width: 100%;
         padding: 1rem;
         border-bottom: 1px solid #ddd;
-        font-size: 0.9rem; /* Adjust font size here */
-
     }
 
     .dropdown.vertical li:last-child {
@@ -202,6 +201,13 @@ ul li:hover .dropdown.vertical {
 
     .dropdown.vertical li {
         padding: 0.8rem;
-        font-size: 0.9rem; /* Adjust font size here */
+    }
+}
+
+/* Additional styles to reduce dropdown text size on smartphones */
+@media (max-width: 480px) {
+    .dropdown.vertical li {
+        padding: 0.5rem; /* Adjust padding for better fit */
+        font-size: 0.7rem; /* Reduce font size */
     }
 }
