@@ -104,15 +104,15 @@ export const Home = () => {
                 <input type="text" id="location" name="location" required />
               </div>
               <div className="form-group">
-                <label htmlFor="course">Course</label>
+                <label htmlFor="course">Program</label>
                 <select id="course" name="course" required>
-                  <option value="">Select a Course</option>
-                  <option value="diploma-program-for-foundational-stage">Diploma Program for Foundational Stage</option>
-                  <option value="certificate-program-for-foundational-stage">Certificate Program for Foundational Stage</option>
-                  <option value="certificate-program-for-teaching-skills">Certificate Program for Teaching Skills</option>
-                  <option value="certificate-program-in-communicative-english-educators">Certificate Program In Communicative English (Educators)</option>
-                  <option value="certificate-program-in-education-leadership">Certificate Program In Education Leadership</option>
-                  <option value="certificate-program-in-communicative-english-school-leaders">Certificate Program In Communicative English (School Leaders)</option>
+                  <option value="">Select a Program</option>
+                  <option value="diploma-program-for-foundational-stage">Diploma for Foundational Stage</option>
+                  <option value="certificate-program-for-foundational-stage">Certificate for Foundational Stage</option>
+                  <option value="certificate-program-for-teaching-skills">Certificate for Teaching Skills</option>
+                  <option value="certificate-program-in-communicative-english-educators">Certificate In Communicative English (Educators)</option>
+                  <option value="certificate-program-in-education-leadership">Certificate In Education Leadership</option>
+                  <option value="certificate-program-in-communicative-english-school-leaders">Certificate In Communicative English (School Leaders)</option>
                 </select>
               </div>
               <button type="submit" className="btn primary-btn">Submit</button>
@@ -162,10 +162,6 @@ export const Home = () => {
           </div>
         </section>
 
-       
-
-
-       
       </main>
     </>
   );
