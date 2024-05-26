@@ -214,33 +214,133 @@ li {
 }
 
 .btn.primary-btn {
+  display: block;
   width: 100%;
-  padding: 1rem 0;
-  font-size: 1.6rem;
-}
-
-
-
-.section-analytics {
-  background-color: var(--bg-color);
-  padding: 4rem 0;
-}
-
-.analytics-item {
+  padding: 1rem;
+  background-color: #005ea0;
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
   text-align: center;
 }
 
-.analytics-img {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 1.6rem;
+.btn.primary-btn:hover {
+  background-color: #004f8a;
+}
+
+.section-analytics {
+  padding: 4rem 0;
+}
+
+.section-analytics .container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.section-analytics .analytics-item {
+  text-align: center;
+}
+
+.section-analytics .analytics-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.section-courses {
+  padding: 4rem 0;
+}
+
+.section-courses .course-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.section-courses .course-card {
+  width: 18rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 1rem;
+}
+
+.section-courses .course-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.section-courses .course-card h3 {
+  margin: 1rem 0;
+}
+
+.section-testimonials {
+  padding: 4rem 0;
+  background-color: #f9f9f9;
+}
+
+.section-testimonials .container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.section-testimonials .testimonial {
+  width: 40%;
+  padding: 2rem;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 1rem;
+}
+
+.section-testimonials .testimonial p {
+  margin: 0;
 }
 
 .popular-courses-heading {
   text-align: center;
-  margin-top: 4rem;
+  margin-top: 2rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.section-about-learnleap {
+  padding: 4rem 0;
+  background-color: #ffffff;
+}
+
+.section-about-learnleap .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-about-learnleap h2 {
+  font-size: 3.5rem;
+
+  margin-bottom: 3rem;
+}
+
+.section-about-learnleap p {
+  font-size: 1.4rem;
+  line-height: 1.6;
   margin-bottom: 2rem;
 }
+
+.section-about-learnleap .btn.primary-btn {
+  width: auto;
+  display: inline-block;
+  padding: 1rem 2rem;
+}
+
+.highlight {
+  color: #005EA0;
+}
+
 
 .section-courses .course-list {
   display: flex;
@@ -275,23 +375,32 @@ li {
   padding: 4rem 0;
 }
 
-.testimonial {
-  text-align: center;
+.section-testimonials .container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.testimonial-item {
+  width: 100%; /* Adjust the width to make it more rectangular */
   background: #fff;
   padding: 2rem;
   border-radius: 0.8rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 1rem 0; /* Add margin for spacing */
 }
 
-.testimonial p {
+.testimonial-item p {
   margin-bottom: 1.6rem;
   font-size: 1.4rem;
 }
 
-.testimonial p:last-child {
+.testimonial-item p:last-child {
   margin-bottom: 0;
   font-style: italic;
 }
+
+
 
 
 
@@ -300,11 +409,13 @@ li {
 /* Analytics Section */
 
 .section-analytics {
-  margin: 5rem 0;
+  margin: 2rem 0;
+  background-color: var(--bg-color); /* Apply background color to the section */
+  border-radius: 1rem;
+  padding: 1rem 0; /* Add padding for better spacing */
 }
 
 .section-analytics .container {
-  background-color: var(--bg-color);
   border-radius: 1rem;
 }
 
@@ -322,14 +433,16 @@ li {
 }
 
 .section-analytics h2 {
-  font-size: 4.8rem;
+  font-size: 3.5rem;
+  background-color: var(--bg-color); /* Apply background color to the heading */
+  border-top-left-radius: 1rem; /* Adjust border radius for better appearance */
+  border-top-right-radius: 1rem; /* Adjust border radius for better appearance */
+  padding: 1rem; /* Add padding for better spacing */
+  margin-top: 0; /* Remove default margin */
 }
 
 .section-analytics p {
   text-transform: capitalize;
-}
-.section-analytics {
-  padding: 1rem 0;
 }
 
 .analytics-item {
@@ -345,8 +458,9 @@ li {
 }
 
 .analytics-item h2 {
-  font-size: 1.5rem; /* Adjust the font size as needed */
+  font-size: 1.4rem; /* Adjust the font size as needed */
 }
+
 
 /* Add other styles as necessary */
 

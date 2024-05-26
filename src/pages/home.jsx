@@ -8,23 +8,23 @@ export const Home = () => {
   const carouselItems = [
     {
       image: '/images/homepage1.png',
-      text: 'Welcome to LearnLeap'
+      text: 'Welcome to <span class="highlight">LearnLeap</span>'
     },
     {
       image: '/images/homepage2.png',
-      text: 'Delivered in online & Hybrid Mode'
+      text: 'Delivered in <span class="highlight">online & Hybrid Mode</span>'
     },
     {
       image: '/images/homepage3.png',
-      text: 'Placement & Internship opportunities offered'
+      text: 'Placement & <span class="highlight">Internship opportunities</span> offered'
     },
     {
       image: '/images/4.png',
-      text: 'Unlock your Potential with training led by a team of highly Recommended faculty'
+      text: 'Unlock your Potential with training led by a team of <span class="highlight">highly Recommended faculty</span>'
     },
     {
       image: '/images/5.png',
-      text: 'Elevate your teaching skills and English proficiency with LearnLeap'
+      text: 'Elevate your teaching skills and <span class="highlight">English proficiency</span> with LearnLeap'
     },
   ];
 
@@ -78,7 +78,7 @@ export const Home = () => {
                 <div key={index} className={`carousel-item ${currentSlide === index ? 'active' : ''}`}>
                   <img src={item.image} alt={`Carousel ${index}`} className="responsive-img" />
                   <div className="carousel-text-overlay up-animation">
-                    <h2>{item.text}</h2>
+                    <h2 dangerouslySetInnerHTML={{ __html: item.text }}></h2>
                   </div>
                 </div>
               ))}
@@ -120,11 +120,27 @@ export const Home = () => {
           </div>
         </section>
 
-        <h2 className="center">Our Presence & Offerings</h2>
+         {/* About LearnLeap Section */}
+         <section className="section-about-learnleap">
+          <div className="container">
+            <h2>About LearnLeap</h2>
+            <p>
+              We aim to enhance teacher's skills for Foundational, Preparatory, Middle, and Secondary stages as per the new school structure of NEP. 
+              In our pursuit of excellence in education, we recognize that empowering teachers is key to unlocking the full potential of our participants.
+              Hence, we are proud to introduce our Online Teacher Enhancement courses like Diploma and Certificate courses in Foundation/ECCED, Teacher Training 
+              and also providing Leadership Development Certificate Course - a virtual gateway to a world of growth, innovation, and continuous learning for educators like you.
+            </p>
+            <a href="/about" className="btn primary-btn">Learn More</a>
+          </div>
+        </section>
+
 
         {/* Analytics Section */}
         <section className="section-analytics">
+        <h2 className="center">Our Presence & Offerings</h2>
+
           <div className="container grid grid-three-cols">
+          
             <div className="analytics-item">
               <img src="/images/1 (3).png" alt="K12 Schools" className="analytics-img" />
               <h2>91 + K12 Schools</h2>
@@ -161,20 +177,24 @@ export const Home = () => {
         <h2 className="center">What Our Clients Say</h2>
 
         {/* Testimonials Section */}
-        <section className="section-testimonials">
-          <div className="container">
-            <div className="grid grid-two-cols">
-              <div className="testimonial">
-                <p>"LearnLeap transformed our IT teaching skills. Highly recommended!"</p>
-                <p>- Alex Johnson</p>
-              </div>
-              <div className="testimonial">
-                <p>"The team at LearnLeap is incredibly skilled and professional."</p>
-                <p>- Maria Davis</p>
-              </div>
-            </div>
-          </div>
-        </section>
+{/* Testimonials Section */}
+<section className="section-testimonials">
+  <div className="container">
+    <div className="grid grid-two-cols">
+      <div className="testimonial-item">
+        <p>"LearnLeap transformed our IT teaching skills. Highly recommended!"</p>
+        <p>- Alex Johnson</p>
+      </div>
+      <div className="testimonial-item">
+        <p>"The team at LearnLeap is incredibly skilled and professional."</p>
+        <p>- Maria Davis</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+       
       </main>
     </>
   );
