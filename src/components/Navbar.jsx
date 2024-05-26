@@ -4,6 +4,7 @@ import "./Navbar.css";
 
 export const Navbar = () => {
   const [showProgramDropdown, setShowProgramDropdown] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMouseEnter = (setter) => () => {
     setter(true);
@@ -13,23 +14,21 @@ export const Navbar = () => {
     setter(false);
   };
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header>
       <div className="social-bar">
         <a href="https://www.facebook.com" target="_blank" className="social-icon">
           <img src="/images/facebook.png" alt="Facebook" />
         </a>
-        <a href="https://www.twitter.com" target="_blank" className="social-icon">
-          <img src="/images/twitter.png" alt="Twitter" />
-        </a>
         <a href="mailto:someone@example.com" className="social-icon">
           <img src="/images/gmail.png" alt="Gmail" />
         </a>
         <a href="https://www.linkedin.com" target="_blank" className="social-icon">
           <img src="/images/linkedin.png" alt="LinkedIn" />
-        </a>
-        <a href="https://www.youtube.com" target="_blank" className="social-icon">
-          <img src="/images/youtube.png" alt="YouTube" />
         </a>
       </div>
 
@@ -40,7 +39,13 @@ export const Navbar = () => {
           </NavLink>
         </div>
 
-        <nav>
+        <button className="menu-toggle" onClick={toggleMenu}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </button>
+
+        <nav className={isMenuOpen ? "open" : ""}>
           <ul>
             <li>
               <NavLink to="/" activeClassName="active">Home</NavLink>

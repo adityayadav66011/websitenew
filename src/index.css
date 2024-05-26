@@ -122,11 +122,7 @@ li {
   background-color: var(--dark-color);
 }
 
-.section-hero {
-  position: relative;
-  height: 70vh;
-  overflow: hidden;
-}
+
 
 .hero-carousel {
   position: absolute;
@@ -162,15 +158,16 @@ li {
 
 .carousel-text-overlay {
   position: absolute;
-  top: 30%;
+  top: 35%; /* Adjust top position */
   left: 5%; /* Adjusted from 0% to 5% for better alignment */
   transform: translateY(-50%);
   color: #fff;
-  font-size: 5rem; /* Increase font size */
+  font-size: 3vw; /* Use vw for font size to make it responsive */
   text-align: left; /* Align text to the left */
   width: 40%; /* Reduce width to ensure text wraps */
   animation: fadeIn 1s ease-in-out;
   white-space: pre-wrap; /* Ensure text wraps */
+  box-sizing: border-box;
 }
 
 @keyframes fadeIn {
@@ -232,6 +229,209 @@ li {
 .highlight {
   color: #005EA0;
 }
+
+.section-hero {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.hero-carousel {
+  flex: 1;
+  height: 100%;
+  position: relative;
+}
+
+
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.carousel-item.active img {
+  animation: zoom 10s infinite linear;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.carousel-text-overlay {
+  position: absolute;
+  top: 30%; /* Adjust top position */
+  left: 5%;
+  transform: translateY(-80%);
+  color: #fff;
+  font-size: 2.4vw; /* Use vw for font size to make it responsive */
+  text-align: left;
+  width: 40%;
+  animation: fadeIn 1s ease-in-out;
+  white-space: pre-wrap;
+  box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
+
+.hero-form-overlay {
+  flex: 0 0 30%;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 0.8rem;
+  max-width: 400px;
+  min-width: 300px;
+  box-sizing: border-box;
+}
+
+.form-group {
+  margin-bottom: 1.6rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.4rem;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+  box-sizing: border-box;
+}
+
+.btn.primary-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: #005ea0;
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.btn.primary-btn:hover {
+  background-color: #004f8a;
+}
+
+.highlight {
+  color: #005EA0;
+}
+
+.hero-form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.hero-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.6rem;
+  border: 1px solid #ddd;
+  border-radius: 0.4rem;
+  box-sizing: border-box;
+}
+
+/* Ensure the form and text are responsive */
+@media (max-width: 1024px) {
+  .carousel-text-overlay {
+    font-size: 2.8vw; /* Adjust font size for tablets */
+    width: 50%;
+  }
+
+  .hero-form-overlay {
+    width: 40%;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+  }
+
+  .carousel-text-overlay {
+    font-size: 2.5vw; /* Adjust font size for smaller tablets */
+    width: 80%; /* Increase width for more space */
+    left: 10%;
+  }
+
+  .hero-form-overlay {
+    width: 80%; /* Adjust width for smaller screens */
+    padding: 1.5rem;
+    position: static; /* Remove absolute positioning */
+    transform: none; /* Remove transform */
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-text-overlay {
+    font-size: 2.5vw; /* Adjust font size for smartphones */
+    width: 90%; /* Increase width for more space */
+    left: 5%;
+  }
+
+  .hero-form-overlay {
+    width: 90%; /* Adjust width for smartphones */
+    padding: 1rem;
+    position: static; /* Remove absolute positioning */
+    transform: none; /* Remove transform */
+    margin-top: 1rem;
+  }
+}
+
+
 
 
 /* General Styles for Courses Section */
@@ -575,7 +775,8 @@ li {
   }
 }
 
-.section-about-us-new, .section-statistics-new {
+.section-about-us-new,
+.section-statistics-new {
   padding: 50px 0;
 }
 
@@ -592,8 +793,8 @@ li {
 }
 
 .about-paragraph {
-  font-size: 1.5rem;
-  line-height: 1.8;
+  font-size: 1.8rem; /* Increased font size for paragraphs */
+  line-height: 2; /* Adjusted line height for better readability */
   margin-bottom: 30px;
   text-align: center;
 }
@@ -606,13 +807,16 @@ li {
 
 .statistics-content-new {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-around; /* Align items horizontally */
+  flex-wrap: wrap; /* Allow items to wrap to next line on smaller screens */
   text-align: center;
+  background-color: #f4f4f4; /* Set background color */
+  padding: 30px; /* Add padding to the statistics section */
 }
 
 .stat-item-new {
   margin-bottom: 20px;
+  flex-basis: calc(20% - 40px); /* Set the width of each stat item */
 }
 
 .stat-number {
@@ -624,6 +828,8 @@ li {
   font-size: 1.5rem;
   margin: 10px 0 0;
 }
+
+/*footer section */
 
 .section-footer {
   background: #333;
@@ -783,7 +989,7 @@ th {
 
   th, td {
     padding: 0.6rem; /* Adjusts the padding for smaller screens */
-    font-size: 1.4rem; /* Adjusts the font size for table cells */
+    font-size: 1.3rem; /* Adjusts the font size for table cells */
   }
 }
 
@@ -793,71 +999,13 @@ th {
   }
 
   .centered-heading {
-    font-size: 1.4rem; /* Adjusts the font size for smaller screens */
+    font-size: 1.5rem; /* Adjusts the font size for smaller screens */
   }
 
   th, td {
     padding: 0.5rem; /* Adjusts the padding for smaller screens */
-    font-size: 1.4rem; /* Adjusts the font size for table cells */
+    font-size: 1.2rem; /* Adjusts the font size for table cells */
   }
-}
-
-
-
-/* new certificate programsection*/
-
-.certificate-program-container {
-  padding: 20px;
-  font-family: Arial, sans-serif;
-}
-
-.certificate-program-heading {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.vertical-headings {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center align the detail sections */
-}
-
-.detail-section {
-  width: 100%; /* Make the detail sections take full width */
-  max-width: 800px; /* Optionally, set a max width */
-  margin-bottom: 20px;
-}
-
-.centered-heading {
-  font-size: 30px;
-  text-align: center; /* Center align the headings */
-  margin-bottom: 10px;
-}
-
-.detail-section table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-
-.detail-section table th,
-.detail-section table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
-
-.detail-section table th {
-  background-color: #f2f2f2;
-}
-
-.detail-section ul {
-  padding-left: 20px;
-}
-
-.detail-section ul li {
-  margin-bottom: 5px;
 }
 
 .container {
