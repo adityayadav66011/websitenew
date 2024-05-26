@@ -8,6 +8,7 @@ import CertificateProgramK12TeachingSkills from "./pages/certificateteaching"; /
 import CertificateProgramLeadership from "./pages/certificateleadership"; // Import the DiplomaProgram component
 import CertificateProgramEnglish from "./pages/certificateenglish"; // Import the DiplomaProgram component
 import ContactUs from "./pages/contactus"; // Import the DiplomaProgram component
+import CertificatePage from "./pages/certificate"; // Import the DiplomaProgram component
 
 
 import { Navbar } from "./components/Navbar";
@@ -25,7 +26,7 @@ const App = () => {
         <Route path="/certificateteaching" element={<CertificateProgramK12TeachingSkills />} /> {/* Add routing for DiplomaProgram */}
         <Route path="/certificateenglish" element={<CertificateProgramEnglish />} /> {/* Add routing for DiplomaProgram */}
         <Route path="/certificateleadership" element={<CertificateProgramLeadership />} /> {/* Add routing for DiplomaProgram */}
-        <Route path="/contactus" element={<ContactUs />} /> {/* Add routing for DiplomaProgram */}
+        <Route path="/certificate" element={<CertificatePage />} /> {/* Add routing for DiplomaProgram */}
 
       </Routes>
       <Footer />

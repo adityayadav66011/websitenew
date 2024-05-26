@@ -1248,3 +1248,49 @@ th {
     font-size: 12px;
   }
 }
+
+.certificate-page-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.certificate-page-heading {
+  font-size: 4em;
+  margin-bottom: 20px;
+}
+
+.image-section {
+  display: flex;
+  justify-content: center;
+}
+
+.certificate-page-image {
+  width: 80%;
+  max-width: 500px;
+  height: auto;
+  border: 2px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .certificate-page-heading {
+    font-size: 3em;
+  }
+
+  .certificate-page-image {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .certificate-page-heading {
+    font-size: 2em;
+  }
+
+  .certificate-page-image {
+    width: 95%;
+    max-width: 300px;
+  }
+}

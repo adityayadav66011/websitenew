@@ -94,6 +94,9 @@ export const Navbar = () => {
               )}
             </li>
             <li>
+              <NavLink to="/certificate" activeClassName="active">Certificate</NavLink>
+            </li>
+            <li>
               <NavLink to="/contactus" activeClassName="active">Contact Us</NavLink>
             </li>
           </ul>
