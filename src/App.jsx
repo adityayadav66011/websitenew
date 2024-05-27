@@ -26,6 +26,8 @@ const App = () => {
         <Route path="/certificateteaching" element={<CertificateProgramK12TeachingSkills />} /> {/* Add routing for DiplomaProgram */}
         <Route path="/certificateenglish" element={<CertificateProgramEnglish />} /> {/* Add routing for DiplomaProgram */}
         <Route path="/certificateleadership" element={<CertificateProgramLeadership />} /> {/* Add routing for DiplomaProgram */}
+        <Route path="/contactus" element={<ContactUs />} /> {/* Add routing for DiplomaProgram */}
+
         <Route path="/certificate" element={<CertificatePage />} /> {/* Add routing for DiplomaProgram */}
 
       </Routes>
